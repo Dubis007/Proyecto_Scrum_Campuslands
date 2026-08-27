@@ -1,7 +1,7 @@
 import json
 import os 
 
-EQUIPOS_JSON = 'datos/equipos.py'
+EQUIPOS_JSON = 'datos/equipos.json'
 
 def cargar_equipos():
     if not os.path.exists(EQUIPOS_JSON):
