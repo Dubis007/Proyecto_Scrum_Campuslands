@@ -7,7 +7,7 @@ def cargar_equipos():
     if not os.path.exists(EQUIPOS_JSON):
         return[]
     try:
-        with open(EQUIPOS_JSON, 'r', enconding='utf-8') as f:
+        with open(EQUIPOS_JSON, 'r', encoding='utf-8') as f:
             return json.load(f)
     except json.JSONDecodeError:
         return []
