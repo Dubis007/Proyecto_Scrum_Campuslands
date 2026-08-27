@@ -5,17 +5,16 @@ from datetime import datetime
 def registrar_nuevo_equipo():
     print(" Bienvenido al sistema de registro de equipos\n")
     
-    ruta_json = "datos/equipos.json"
+    directorio_actual = os.path.dirname(os.path.abspath(__file__))
+    ruta_json = os.path.join(directorio_actual, "datos", "equipos.json")
     
-    # Verificación si la carpeta existe
     directorio = os.path.dirname(ruta_json)
     if directorio and not os.path.exists(directorio):
         try:
-            os.makedirs(directorio)
+            os.makedirs(directorio, exist_ok=True)
         except Exception as e:
             print(f"Error al crear los directorios: {e}\n")
     
-    # Cargue de información de el json
     equipos = []
     if os.path.exists(ruta_json):
         try:
@@ -23,6 +22,7 @@ def registrar_nuevo_equipo():
                 equipos = json.load(archivo)
         except Exception as e:
             print(f"Error al leer el archivo JSON: {e}\n")
+            return []
             
     # Autoincremental id
     if len(equipos) == 0:
