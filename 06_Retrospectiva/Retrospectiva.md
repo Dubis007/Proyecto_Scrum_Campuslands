@@ -41,7 +41,7 @@
 ### 3.3 ¿Qué causó esos problemas?
 
 - No se acordó el esquema JSON detallado antes de iniciar la programación de la lógica transaccional.
-- Falta de un estándar de convención de ramas y commits compartido desde el día uno.
+- Falta de un estándar de convención de ramas compartido desde el día uno.
 - Priorización del avance en código funcional postergando la documentación de casos de prueba.
 
 ### 3.4 ¿Qué debemos cambiar en el próximo Sprint?
