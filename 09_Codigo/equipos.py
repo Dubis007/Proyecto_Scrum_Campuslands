@@ -27,11 +27,11 @@ def consultar_equipos(solo_disponibles=False):
 
         if solo_disponibles:
                 equipos_a_mostrar = [equi for equi in equipos if equi.get('estado') == 'disponible']
-                titulo = "______LISTA DE EQUIPOS DISPONIBLES______"
+                titulo = "-----LISTA DE EQUIPOS DISPONIBLES-----"
         else : 
 
          equipos_a_mostrar = equipos
-         titulo = "____INVENTARIO GENERAL DE EQUIPOS____"
+         titulo = "-----INVENTARIO GENERAL DE EQUIPOS-----"
 
         if not equipos_a_mostrar:
          print("\nNo existen equipos registrados actualmente.")
