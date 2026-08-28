@@ -2,16 +2,20 @@ import json
 import os
 from datetime import datetime
 
-EQUIPOS_JSON = 'datos/equipos.json'
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+EQUIPOS_JSON = os.path.join(BASE_DIR, "datos", "equipos.json")
 
 def cargar_equipos():
     if not os.path.exists(EQUIPOS_JSON):
         return[]
     try:
         with open(EQUIPOS_JSON, 'r', encoding='utf-8') as f:
-            return json.load(f)
+            contenido = f.read().strip()
+            if not contenido:  
+                return []
+            return json.loads(contenido)
     except json.JSONDecodeError: 
-        print("Error: El archivo 'equipos.json' está dañado o tiene un formato inválido.")
+        print("Error: El archivo 'equipos.json' está dañado o tiene un formato inválido. Se iniciará lista vacia")
         return []
     except Exception as e: 
         print(f"Error inesperado al leer el archivo de equipos: {e}")
@@ -26,8 +30,11 @@ def consultar_equipos(solo_disponibles=False):
             return
 
         if solo_disponibles:
-                equipos_a_mostrar = [equi for equi in equipos if equi.get('estado') == 'disponible']
-                titulo = "-----LISTA DE EQUIPOS DISPONIBLES-----"
+                equipos_a_mostrar = [
+                    equi for equi in equipos 
+                    if str(equi.get('estado','')).strip().upper() == 'DISPONIBLE'
+                    ]
+                titulo = "______LISTA DE EQUIPOS DISPONIBLES______"
         else : 
 
          equipos_a_mostrar = equipos
@@ -43,13 +50,13 @@ def consultar_equipos(solo_disponibles=False):
         print("-" * 65)
 
         for equi in equipos_a_mostrar:
-         codigo = equi.get('codigo', 'N/A') 
+         serial_cod = equi.get('serial') or equi.get('codigo') or 'N/A'
          tipo = equi.get('tipo', 'N/A')
          marca = equi.get('marca', 'N/A')
          modelo = equi.get('modelo', 'N/A')
          estado = equi.get('estado', 'N/A')
 
-         print(f"{codigo:<10} | {tipo:<12} | {marca:<12} | {modelo:<12} | {estado:<10}")
+         print(f"{serial_cod:<10} | {tipo:<12} | {marca:<12} | {modelo:<12} | {estado:<10}")
 
          print("-" * 65)
     except KeyError as e:
@@ -58,29 +65,20 @@ def consultar_equipos(solo_disponibles=False):
         print(f"\n[!] Ha ocurrido un error inesperado al consultar los equipos: {e}")
 
 def registrar_nuevo_equipo():
-    print(" Bienvenido al sistema de registro de equipos\n")
+    print("\nBienvenido al sistema de registro de equipos\n")
     
-    directorio_actual = os.path.dirname(os.path.abspath(__file__))
-    ruta_json = os.path.join(directorio_actual, "datos", "equipos.json")
+    directorio_actual = os.path.dirname(EQUIPOS_JSON)
     
-    directorio = os.path.dirname(ruta_json)
-    if directorio and not os.path.exists(directorio):
+    if directorio_actual and not os.path.exists(directorio_actual):
         try:
-            os.makedirs(directorio, exist_ok=True)
+            os.makedirs(directorio_actual, exist_ok=True)
         except Exception as e:
             print(f"Error al crear los directorios: {e}\n")
     
-    equipos = []
-    if os.path.exists(ruta_json):
-        try:
-            with open(ruta_json, "r", encoding="utf-8") as archivo:
-                equipos = json.load(archivo)
-        except Exception as e:
-            print(f"Error al leer el archivo JSON: {e}\n")
-            return []
+    equipos = cargar_equipos()
             
     # Autoincremental id
-    if len(equipos) == 0:
+    if not equipos:
         nuevo_id = 1
     else:
         try:
@@ -178,7 +176,7 @@ def registrar_nuevo_equipo():
         # Guardar en el JSON
         equipos.append(equipo_nuevo)
         
-        with open(ruta_json, "w", encoding="utf-8") as archivo:
+        with open(EQUIPOS_JSON, "w", encoding="utf-8") as archivo:
             json.dump(equipos, archivo, indent=4, ensure_ascii=False)
             
         print(f"¡Éxito! El equipo {tipo} {marca} {modelo} (Serial: {serial_f}) fue registrado correctamente.\n")
@@ -190,24 +188,9 @@ def registrar_nuevo_equipo():
 def menu_equipos():
 
     while True:
-
-        print("------MÓDULO DE GESTIÓN DE EQUIPOS------")
-        print("Este módulo administra el inventario físico.")
-        print("Permite registrar PORTÁTILES, TABLETS o PROYECTORES,")
-        print("asignando ID, estado y fecha de forma automática.")
-        print("MENÚ DE OPCIONES")
-        print("1. Registrar un nuevo equipo")
-        print("2. Regresar al menú principal")
-    
         try:
-            opcion = input("Seleccione la opción deseada (1 o 2): \n").strip()
-            
-            if opcion == "1":
-                registrar_nuevo_equipo()
-            elif opcion == "2":
-                print("Saliendo...\n")
-                break
-            else:
-                print("Opción incorrecta. Por favor digite 1 o 2.\n")
-        except Exception as e:
-            print(f"Error inesperado en el menú: {e}\n")
+            registrar_nuevo_equipo()
+            break
+        except KeyboardInterrupt:
+            print("\nOperación cancelada por el usuario.")
+            break        
