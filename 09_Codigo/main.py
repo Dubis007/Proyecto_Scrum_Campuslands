@@ -1,5 +1,5 @@
 from equipos import consultar_equipos, menu_equipos
-from estudiantes import pedir_registro, mostrar_estudiantes
+from estudiantes import pedir_registro_estudiante, mostrar_estudiantes
 
 def menu_principal():
     while True:
