@@ -1,9 +1,14 @@
 import json
 import os
 
-EQUIPOS_JSON = 'datos/equipos.json'
-ESTUDIANTES_JSON = 'datos/estudiantes.json'
-PRESTAMOS_JSON = 'datos/prestamos.json'
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(BASE_DIR, "datos")
+
+os.makedirs(DATA_DIR, exist_ok=True)
+
+EQUIPOS_JSON = os.path.join(DATA_DIR, 'equipos.json')
+ESTUDIANTES_JSON = os.path.join(DATA_DIR, 'estudiantes.json')
+PRESTAMOS_JSON = os.path.join(DATA_DIR, 'prestamos.json')
 
 def cargar_datos_json(ruta):
     if not os.path.exists(ruta):
