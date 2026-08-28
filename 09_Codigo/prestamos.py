@@ -29,9 +29,9 @@ def cargar_datos_json(ruta):
 
 def consultar_equipos_prestados():
     try:
-        prestamos = cargar_datos_json(RUTA_PRESTAMOS)
-        estudiantes = cargar_datos_json(RUTA_ESTUDIANTES)
-        equipos = cargar_datos_json(RUTA_EQUIPOS)
+        prestamos = cargar_datos_json(PRESTAMOS_JSON)
+        estudiantes = cargar_datos_json(ESTUDIANTES_JSON)
+        equipos = cargar_datos_json(EQUIPOS_JSON)
 
         prestamos_archivos = [p for p in prestamos if str(p.get('estado', '')).strip().upper() == 'ACTIVO']
 
