@@ -70,7 +70,7 @@ def registrar_estudiante(
     return True, "Estudiante registrado correctamente."
 
 
-def pedir_registro():
+def pedir_registro_estudiante():
     print("\n--- Registrar estudiante ---")
 
     while True:

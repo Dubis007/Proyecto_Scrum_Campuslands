@@ -1,13 +1,15 @@
 from equipos import consultar_equipos
-from estudiantes import pedir_registro, mostrar_estudiantes
+from estudiantes import pedir_registro_estudiante, mostrar_estudiantes
+from prestamos import consultar_equipos_prestados
 
 def menu_principal():
     while True:
-        print("\n____ SISTEMA DE PRÉSTAMOS____")
+        print("\n----BIENVENIDO A SISTEMA DE PRÉSTAMOS----")
         print("1. Consultar todos los equipos")
         print("2. Consultar solo equipos disponibles")
         print("3. Registrar estudiante")
         print("4. Mostrar estudiantes registrados")
+        print("7. Consultar equipos prestados")
         print("0. Salir")
 
         opcion = input("Selecciona una opcion: ")
@@ -17,9 +19,11 @@ def menu_principal():
         elif opcion == "2":
                 consultar_equipos(solo_disponibles=True)
         elif opcion == "3":
-                pedir_registro()
+                pedir_registro_estudiante()
         elif opcion == "4":
                 mostrar_estudiantes()
+        elif opcion == "7":
+             consultar_equipos_prestados()        
         elif opcion == "0":
              break
         else:
