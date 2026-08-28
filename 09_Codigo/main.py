@@ -1,6 +1,6 @@
 from equipos import consultar_equipos, menu_equipos
 from estudiantes import pedir_registro_estudiante, mostrar_estudiantes
-from prestamos import consultar_equipos_prestados
+from prestamos import pedir_prestamo
 
 def menu_principal():
     while True:
@@ -10,13 +10,12 @@ def menu_principal():
         print("3. Registrar estudiante")
         print("4. Mostrar estudiantes registrados")
         print("5. Registrar nuevo equipo")
-        print("7. consultar equipos prestados")
         print("0. Salir")
 
         opcion = input("Selecciona una opcion: ")
 
         if opcion == "1":
-            consultar_equipos(solo_disponibles=False)
+                consultar_equipos(solo_disponibles=False)
         elif opcion == "2":
                 consultar_equipos(solo_disponibles=True)
         elif opcion == "3":
@@ -25,10 +24,10 @@ def menu_principal():
                 mostrar_estudiantes()
         elif opcion == "5":
                 menu_equipos()
-        elif opcion == "7":
-             consultar_equipos_prestados()    
+        elif opcion == "6":
+                pedir_prestamo() 
         elif opcion == "0":
-             break
+                break
         else:
              print("La opción ingresada es Inválida. ")
 
