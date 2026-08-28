@@ -1,6 +1,6 @@
 # Proyecto_Scrum_Campuslands
 
-### 7. Plan de Pruebas, Casos Ejecutados y Resultados
+### Plan de Pruebas, Casos Ejecutados y Resultados
 
 Se ejecutó un plan de pruebas funcionales para validar los criterios de aceptación:
 
@@ -43,30 +43,5 @@ Se ejecutó un plan de pruebas funcionales para validar los criterios de aceptac
 | Operación bloqueada informando no disponibilidad.
 
 | Mensaje de advertencia; no se generó el préstamo duplicado. | **PASÓ** |
-| **CP-06** | Registro de Devolución (HU05)
-
-| Préstamo activo de `EQ-101`<br> | Préstamo finalizado con fecha; equipo vuelve a "Disponible".
-
-| Devolución procesada; equipo en estado "Disponible".
-
-| **PASÓ** |
-| **CP-07** | Consulta Préstamos Activos (HU06)
-
-| Consulta general con registros activos e inactivos
-
-| Lista únicamente transacciones activas.
-
-| Listado filtrado correcto en consola.
-
-| **PASÓ** |
-| **CP-08** | Historial Consolidado (HU07)
-
-| Solicitud de historial completo
-
-| Bitácora cronológica completa.
-
-| Listado integral mostrado correctamente.
-
-| **PASÓ** |
 
 ---
