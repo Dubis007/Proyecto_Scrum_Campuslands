@@ -1,5 +1,5 @@
 from equipos import consultar_equipos
-from equipos import consultar_equipos_prestados
+from prestamos import consultar_equipos_prestados
 from estudiantes import pedir_registro, mostrar_estudiantes
 
 def menu_principal():
