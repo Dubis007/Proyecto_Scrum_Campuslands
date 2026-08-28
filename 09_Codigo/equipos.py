@@ -205,8 +205,8 @@ def menu_equipos():
             if opcion == "1":
                 registrar_nuevo_equipo()
             elif opcion == "2":
-                print("Saliendo...\n")
-                break
+                print("Saliendo del módulo de gestión de equipos...\n")
+                return
             else:
                 print("Opción incorrecta. Por favor digite 1 o 2.\n")
         except Exception as e:
