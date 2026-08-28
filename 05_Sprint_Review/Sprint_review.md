@@ -70,3 +70,5 @@ Durante la sesión, el equipo de desarrollo realizó la demostración en vivo po
 - **Enlace a la grabación de la Review (5-10 min):** `[https://drive.google.com/drive/folders/1T6enUAYocAxd57YYJ2h4P_Pje6IjSEja?usp=sharing]`
 - **Enlace al repositorio de código:** `[https://github.com/Dubis007/Proyecto_Scrum_Campuslands/tree/main/09_Codigo]`
 - **Estado del Tablero Trello:** Tarjetas de HU01 a HU04 movidas a columna `Done`.
+
+![alt text](trello.png)
