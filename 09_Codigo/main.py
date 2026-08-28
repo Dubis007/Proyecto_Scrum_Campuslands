@@ -4,7 +4,7 @@ from estudiantes import pedir_registro, mostrar_estudiantes
 
 def menu_principal():
     while True:
-        print("\n____BIENVENIDO A SISTEMA DE PRÉSTAMOS____")
+        print("\n----BIENVENIDO A SISTEMA DE PRÉSTAMOS----")
         print("1. Consultar todos los equipos")
         print("2. Consultar solo equipos disponibles")
         print("3. Registrar estudiante")
