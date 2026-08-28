@@ -1,5 +1,6 @@
 from equipos import consultar_equipos, menu_equipos
 from estudiantes import pedir_registro_estudiante, mostrar_estudiantes
+from prestamos import consultar_equipos_prestados
 
 def menu_principal():
     while True:
@@ -23,6 +24,8 @@ def menu_principal():
                 mostrar_estudiantes()
         elif opcion == "5":
                 menu_equipos()
+        elif opcion == "7":
+             consultar_equipos_prestados()    
         elif opcion == "0":
              break
         else:
