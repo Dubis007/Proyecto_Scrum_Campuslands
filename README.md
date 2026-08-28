@@ -58,13 +58,13 @@ El README contiene únicamente la información de acceso y ejecución. El detall
 - [`06_Retrospectiva/Retrospectiva.md`](06_Retrospectiva/Retrospectiva.md): análisis y acciones de mejora.
 - [`07_Pruebas/Pruebas.md`](07_Pruebas/Pruebas.md): casos de prueba y resultados.
 - [`08_Informe_Final/Informe_final.md`](08_Informe_Final/Informe_final.md): resumen final y referencias del proyecto.
-- [`10_Videos/`](10_Videos/): carpeta reservada para evidencias audiovisuales; los enlaces disponibles están en el informe final.
+- [`10_Videos/Videos.md`](10_Videos/Videos.md): referencia a la carpeta de Google Drive que contiene todos los videos y evidencias audiovisuales del proyecto.
 
 ## Enlaces externos
 
 - [Repositorio del proyecto](https://github.com/Dubis007/Proyecto_Scrum_Campuslands)
 - [Tablero de Trello](https://trello.com/b/pJxnmiJQ/proyecto-scrum-backlog-campuslands)
-- [Videos y demostración](https://drive.google.com/drive/u/1/folders/1c-dbEQzobV8-gM08pLgER85Y6HMWYCjn)
+- [Videos y demostración](10_Videos/Videos.md)
 
 ## Equipo Scrum
 
