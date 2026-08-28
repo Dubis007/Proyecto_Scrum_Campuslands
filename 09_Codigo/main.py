@@ -5,7 +5,7 @@ def menu_principal():
     while True:
         print("\n____ SISTEMA DE PRÉSTAMOS____")
         print("1. Consultar todos los equipos")
-        print("2. Consultar solo equipos disponibles")
+        print("2. Consultar equipos disponibles")
         print("3. Registrar estudiante")
         print("4. Mostrar estudiantes registrados")
         print("5. Registrar nuevo equipo")

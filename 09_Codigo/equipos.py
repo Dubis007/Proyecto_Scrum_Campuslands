@@ -65,7 +65,7 @@ def consultar_equipos(solo_disponibles=False):
         print(f"\n[!] Ha ocurrido un error inesperado al consultar los equipos: {e}")
 
 def registrar_nuevo_equipo():
-    print(" Bienvenido al sistema de registro de equipos\n")
+    print("\nBienvenido al sistema de registro de equipos\n")
     
     directorio_actual = os.path.dirname(EQUIPOS_JSON)
     
@@ -188,27 +188,9 @@ def registrar_nuevo_equipo():
 def menu_equipos():
 
     while True:
-
-        print("------MÓDULO DE GESTIÓN DE EQUIPOS------")
-        print("Este módulo administra el inventario físico.")
-        print("Permite registrar PORTÁTILES, TABLETS o PROYECTORES,")
-        print("asignando ID, estado y fecha de forma automática.")
-        print("MENÚ DE OPCIONES")
-        print("1. Registrar un nuevo equipo")
-        print("0. Regresar al menú principal")
-    
         try:
-            opcion = input("Seleccione la opción deseada (1 o 0): \n").strip()
-            
-            if opcion == "1":
-                registrar_nuevo_equipo()
-            elif opcion == "0":
-                print("Saliendo del módulo de gestión de equipos, regresando al menú principal...\n")
-                break
-            else:
-                print("Opción incorrecta. Por favor digite 1 o 0.\n")
+            registrar_nuevo_equipo()
+            break
         except KeyboardInterrupt:
             print("\nOperación cancelada por el usuario.")
             break        
-        except Exception as e:
-            print(f"Error inesperado en el menú: {e}\n")
