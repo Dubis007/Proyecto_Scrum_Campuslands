@@ -10,6 +10,7 @@ def menu_principal():
         print("3. Registrar estudiante")
         print("4. Mostrar estudiantes registrados")
         print("5. Registrar nuevo equipo")
+        print("7. consultar equipos prestados")
         print("0. Salir")
 
         opcion = input("Selecciona una opcion: ")
