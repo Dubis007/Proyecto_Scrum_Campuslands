@@ -8,7 +8,7 @@ Se ejecutó un plan de pruebas funcionales para validar los criterios de aceptac
 | ------------------- | ------------------------- | ------------------ | ------ |
 | **CP-01**           | Registro de Equipo (HU01) |
 
-| Datos válidos: Código `EQU-101`, Portátil, Dell, Latitude
+| Datos válidos: Código `EQU-101`, Portátil, Dell, Latitude 3420
 
 | Registro exitoso, estado "Disponible" y guardado en JSON.
 

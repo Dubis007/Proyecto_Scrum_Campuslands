@@ -23,7 +23,7 @@
 | **HU02** | Consultar inventario y disponibilidad de equipos |   Alta    |      2       |     Sprint 1     | Pendiente |
 | **HU03** | Registrar estudiantes para vincular préstamos    |   Alta    |      3       |     Sprint 1     | Pendiente |
 | **HU04** | Registrar préstamo de equipo a estudiante        |   Alta    |      5       |     Sprint 1     | Pendiente |
-| **HU05** | Registrar devolución de equipo prestado          |   Alta    |      3       |     Sprint 1     | Pendiente |
+| **HU05** | Registrar devolución de equipo prestado          |   Alta    |      3       | Backlog / Futuro | Pendiente |
 | **HU06** | Consultar lista de equipos actualmente prestados |   Media   |      5       | Backlog / Futuro | Pendiente |
 | **HU07** | Consultar historial general de préstamos         |   Media   |      5       | Backlog / Futuro | Pendiente |
 | **HU08** | Eliminar equipo del inventario                   |   Baja    |      3       | Backlog / Futuro | Pendiente |
