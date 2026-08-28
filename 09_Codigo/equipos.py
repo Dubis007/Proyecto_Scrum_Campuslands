@@ -38,7 +38,7 @@ def consultar_equipos(solo_disponibles=False):
         else : 
 
          equipos_a_mostrar = equipos
-         titulo = "____INVENTARIO GENERAL DE EQUIPOS____"
+         titulo = "-----INVENTARIO GENERAL DE EQUIPOS-----"
 
         if not equipos_a_mostrar:
          print("\nNo existen equipos registrados actualmente.")
