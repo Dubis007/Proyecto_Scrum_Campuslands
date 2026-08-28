@@ -10,7 +10,6 @@ def menu_principal():
         print("3. Registrar estudiante")
         print("4. Mostrar estudiantes registrados")
         print("5. Registrar nuevo equipo")
-        print("7. consultar equipos prestados")
         print("0. Salir")
 
         opcion = input("Selecciona una opcion: ")
@@ -24,9 +23,7 @@ def menu_principal():
         elif opcion == "4":
                 mostrar_estudiantes()
         elif opcion == "5":
-                menu_equipos()
-        elif opcion == "7":
-             consultar_equipos_prestados()    
+                menu_equipos() 
         elif opcion == "0":
              break
         else:
