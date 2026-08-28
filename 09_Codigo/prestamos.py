@@ -18,7 +18,7 @@ def cargar_datos_json(ruta):
         print(f"[!] Error inesperado al leer '{ruta}': {e}")
         return []
 
-def Equipos_prestados():
+def consultar_equipos_prestados():
     try:
         prestamos = cargar_datos_json(PRESTAMOS_JSON)
         estudiantes = cargar_datos_json(ESTUDIANTES_JSON)
